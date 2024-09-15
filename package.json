@@ -4,7 +4,8 @@
   "description": "A portfolio website built with Node.js and Express",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "build": "your-build-command-here" 
   },
   "dependencies": {
     "express": "^4.21.0"
