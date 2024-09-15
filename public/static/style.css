@@ -352,7 +352,19 @@ nav {
     transition: color 0.3s;
 }
 
-.icons a:hover {
+.icons a[aria-label="LinkedIn"]:hover {
+    color: #0011ff;
+}
+
+.icons a[aria-label="GitHub"]:hover {
+    color: #000;
+}
+
+.icons a[aria-label="Facebook"]:hover {
+    color: #0011ff;
+}
+
+.icons a[aria-label="Instagram"]:hover {
     color: #ff5252;
 }
 
