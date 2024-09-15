@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 
-* , *::after , *::before {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -15,7 +17,7 @@ body {
 
 header {
     height: 100vh;
-    background-color: #2c3e50; 
+    background-color: #2c3e50;
     padding: 20px 10%;
     display: flex;
     justify-content: center;
@@ -25,13 +27,13 @@ header {
 
 nav {
     position: fixed;
-    background: #2c3e50; 
+    background: #2c3e50;
     top: 0;
     left: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #34495e; 
+    border-bottom: 2px solid #34495e;
     width: 90%;
     padding: 10px 20px;
     z-index: 1000;
@@ -67,7 +69,7 @@ nav {
     content: '';
     width: 0;
     height: 2px;
-    background-color: #e74c3c; 
+    background-color: #e74c3c;
     position: absolute;
     left: 0;
     bottom: -5px;
@@ -100,7 +102,7 @@ nav {
 }
 
 .header-text h1 span {
-    color: #e74c3c; 
+    color: #e74c3c;
 }
 
 .header-text a {
@@ -109,7 +111,7 @@ nav {
     display: inline-block;
     padding: 12px 24px;
     text-decoration: none;
-    background-color: #27ae60; 
+    background-color: #27ae60;
     border-radius: 12px;
     margin-top: 10px;
 }
@@ -131,9 +133,9 @@ nav {
     width: 100%;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     background-color: rgba(52, 152, 219, 0.1);
-    padding: 10px; 
+    padding: 10px;
     margin-top: 20px;
 }
 
@@ -142,7 +144,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 40px 10%;
-    background: #ecf0f1; 
+    background: #ecf0f1;
     height: 110vh;
 }
 
@@ -216,7 +218,7 @@ nav {
 }
 
 .tab-contents ul li span {
-    color: #3498db; 
+    color: #3498db;
     font-size: 0.9rem;
 }
 
@@ -233,8 +235,6 @@ nav {
 .pro-one .title {
     font-size: 2.5rem;
     color: #333;
-    .
-    
 }
 
 .pro-list {
@@ -283,7 +283,7 @@ nav {
     display: inline-block;
     padding: 8px 16px;
     text-decoration: none;
-    color: #e74c3c; 
+    color: #e74c3c;
     background: #f9f9f9;
     border: 2px solid #e74c3c;
     border-radius: 20px;
@@ -303,7 +303,7 @@ nav {
     padding: 10px 20px;
     text-decoration: none;
     color: #fff;
-    background: #3498db; 
+    background: #3498db;
     border-radius: 20px;
     font-size: 1rem;
 }
@@ -315,24 +315,27 @@ nav {
 
 #contact {
     padding: 40px 10%;
-    background: linear-gradient(#ece9e6, #e6e6e6 , #ece9e6);
+    background: linear-gradient(#ece9e6, #e6e6e6, #ece9e6);
     display: flex;
     align-items: center;
     gap: 20px;
     height: 100vh;
 }
 
-.con-one , .con-two{
+.con-one,
+.con-two {
     width: 45%;
 }
 
-.con-one h3, .con-form h3{
+.con-one h3,
+.con-form h3 {
     color: #333;
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-.icon, .icons {
+.icon,
+.icons {
     margin-bottom: 20px;
 }
 
@@ -345,7 +348,7 @@ nav {
 .icons a {
     margin-right: 20px;
     color: #555;
-    font-size: 2rem; 
+    font-size: 2rem;
     transition: color 0.3s;
 }
 
@@ -359,7 +362,7 @@ nav {
     background: #f4f4f4;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgb(0,0,0,0.5);
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0, 0.5);
 }
 
 .con-two form {
@@ -374,7 +377,7 @@ nav {
     font-weight: 600;
 }
 
-.con-two form input, 
+.con-two form input,
 .con-two form textarea {
     padding: 10px;
     border-radius: 5px;
@@ -384,7 +387,7 @@ nav {
 
 .con-two form button {
     padding: 10px;
-    background: #e74c3c; 
+    background: #e74c3c;
     color: white;
     font-size: 1rem;
     border: 0;
