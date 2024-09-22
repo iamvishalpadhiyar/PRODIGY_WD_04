@@ -1,5 +1,18 @@
 require('dotenv').config();
 
+const navbar = document.getElementById("nav-bar");
+const navclose = document.getElementById("nav-close");
+
+navbar.addEventListener("click", () => {
+    navclose.style.display = "block";
+    navbar.style.display = "none";
+});
+
+navclose.addEventListener("click", () => {
+    navclose.style.display = "none";
+    navbar.style.display = "block";
+});
+
 function opentab(tabname) {
     var tablinks = document.getElementsByClassName("tab-links");
     var tabcontents = document.getElementsByClassName("tab-contents");

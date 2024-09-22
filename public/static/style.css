@@ -27,16 +27,16 @@ header {
 
 nav {
     position: fixed;
-    background: #2c3e50;
+    background: rgb(44, 62, 80);
     top: 0;
     left: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px solid #34495e;
+    border-bottom: 2px solid #242a31;
     width: 90%;
     padding: 10px 20px;
-    z-index: 1000;
+    z-index: 10;
 }
 
 .logo h1 {
@@ -53,11 +53,47 @@ nav {
     gap: 20px;
 }
 
-.ul-links li {
+.nav-toggle-links {
+    position: absolute;
+    z-index: 20;
+    top: 70px;
+    right: 10px;
+    background: rgba(44, 62, 80, 0.6); 
+    overflow: hidden; 
+    border-radius: 10px; 
+    display: none;
+}
+
+.nav-toggle-links::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(105deg,rgba(42, 58, 73, 0.6),rgba(44, 62, 80, 0.6)); 
+    filter: blur(50px); 
+    z-index: -1; 
+}
+
+.toggle-links {
+    position: relative;
+    z-index: 30;  
+    display: block;
+    width: 350px;
+    text-align: center;
+    color: white; 
+}
+
+.ul-links li, .toggle-links li{
     list-style: none;
 }
 
-.ul-links li a {
+.toggle-links li {
+    margin: 20px;
+}
+
+.ul-links li a, .toggle-links li a {
     text-decoration: none;
     font-size: 1rem;
     color: white;
@@ -65,18 +101,35 @@ nav {
     padding: 5px 0;
 }
 
-.ul-links li a::after {
+.toggle-links li a {
+    font-size: 1.5rem;
+}
+
+.ul-links li a::after, .toggle-links li a::after {
     content: '';
     width: 0;
     height: 2px;
     background-color: #e74c3c;
     position: absolute;
-    left: 0;
+    left: -5px;
     bottom: -5px;
 }
 
-.ul-links li a:hover::after {
+.toggle-links li a::after {
+    bottom: 0px;
+}
+
+.ul-links li a:hover::after, .toggle-links li a:hover::after {
     width: 110%;
+}
+
+.nav-toggle {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#nav-bar, #nav-close {
+    display: none;
 }
 
 .header-content {
@@ -143,9 +196,8 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 10%;
     background: #ecf0f1;
-    height: 110vh;
+    height: auto;
 }
 
 .about-row {
@@ -154,6 +206,7 @@ nav {
     gap: 20px;
     flex-wrap: wrap;
     margin: 0 auto;
+    padding: 90px 40px 20px 40px;
 }
 
 .about-one {
@@ -314,12 +367,12 @@ nav {
 }
 
 #contact {
-    padding: 40px 10%;
+    padding: 90px 40px 20px 40px;
     background: linear-gradient(#ece9e6, #e6e6e6, #ece9e6);
     display: flex;
     align-items: center;
     gap: 20px;
-    height: 100vh;
+    height: auto;
 }
 
 .con-one,
@@ -428,4 +481,50 @@ footer h3 {
 footer p {
     margin: 5px 0;
     color: #ccc;
+}
+
+@media (max-width:599px) {
+    header {
+        height: auto;
+        padding: 20px 40px;
+    }
+    .nav-links {
+        display: none;
+    }
+    #nav-bar {
+        display: block;
+    }
+    .header-content {
+        display: block;
+    }
+    .header-text {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .header-image {
+        width: 100%;
+        padding: 0;
+    }
+    #about {
+        height: auto;
+    }
+    .about-row {
+        display: block;
+    }
+    .about-one img {
+        width: 100%;
+    }
+    .about-two {
+        width: 100%;
+    }
+    #project {
+        height: auto;
+    }
+    #contact {
+        height: auto;
+        flex-direction: column;
+    }
+    .con-one, .con-two {
+        width: 100%;
+    }
 }
