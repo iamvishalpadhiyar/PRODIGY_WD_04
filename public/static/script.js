@@ -1,6 +1,3 @@
-Document.addEventListener('load', ()=> {
-    document.querySelector("#nav-bar").style.display = "none";
-});
 const navbar = document.querySelector("#nav-bar");
 const navclose = document.querySelector("#nav-close");
 const navToggleLinks = document.querySelector(".nav-toggle-links");
