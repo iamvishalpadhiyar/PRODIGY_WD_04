@@ -39,6 +39,10 @@ nav {
     z-index: 10;
 }
 
+.logo {
+    margin: 20px;
+}
+
 .logo h1 {
     font-size: 2rem;
     color: white;
