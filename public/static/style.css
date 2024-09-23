@@ -29,12 +29,12 @@ nav {
     position: fixed;
     background: rgb(44, 62, 80);
     top: 0;
-    left: 5%;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid #242a31;
-    width: 90%;
     padding: 10px 20px;
     z-index: 10;
 }
@@ -486,7 +486,6 @@ footer p {
 @media (max-width:599px) {
     header {
         height: auto;
-        padding: 20px 40px;
     }
     .nav-links {
         display: none;

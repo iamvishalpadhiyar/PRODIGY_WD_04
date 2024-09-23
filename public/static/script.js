@@ -1,16 +1,29 @@
-require('dotenv').config();
+Document.addEventListener('load', ()=> {
+    document.querySelector("#nav-bar").style.display = "none";
+});
+const navbar = document.querySelector("#nav-bar");
+const navclose = document.querySelector("#nav-close");
+const navToggleLinks = document.querySelector(".nav-toggle-links");
+const toggleLinks = document.querySelectorAll(".toggle-links li a");
 
-const navbar = document.getElementById("nav-bar");
-const navclose = document.getElementById("nav-close");
-
-navbar.addEventListener("click", () => {
-    navclose.style.display = "block";
+navbar.addEventListener('click', ()=> {
     navbar.style.display = "none";
+    navclose.style.display = "block";
+    navToggleLinks.style.display = "flex";
+})
+
+navclose.addEventListener('click', ()=> {
+    navbar.style.display = "block";
+    navclose.style.display = "none";
+    navToggleLinks.style.display = "none";
 });
 
-navclose.addEventListener("click", () => {
-    navclose.style.display = "none";
-    navbar.style.display = "block";
+toggleLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navbar.style.display = "block";
+        navclose.style.display = "none";
+        navToggleLinks.style.display = "none";
+    });
 });
 
 function opentab(tabname) {
@@ -28,19 +41,27 @@ function opentab(tabname) {
 }
 
 function sendEmail() {
+    const userEmail = document.getElementById("email").value; 
+    
     Email.send({
-        SecureToken : process.env.SMTP_TOKEN,
-        To : "21bca049@sxca.edu.in",
-        From : "your-verified-email@example.com", 
-        Subject : "New Contact Form Enquiry",
-        Body : "Name : " + document.getElementById("name").value 
-            + "<br> Email : " + document.getElementById("email").value 
-            + "<br> Phone : " + document.getElementById("phone").value 
-            + "<br> Message : " + document.getElementById("msg").value
+        SecureToken: "ea4e9e0c-97b9-4894-9440-8acf477a4e5d",
+        To: "vishalmpadhiyar1410@gmail.com", 
+        From: userEmail, 
+        Subject: "New Contact Form Enquiry",
+        Body: "Name: " + document.getElementById("name").value 
+            + "<br>Email: " + userEmail 
+            + "<br>Phone: " + document.getElementById("phone").value 
+            + "<br>Message: " + document.getElementById("msg").value
     }).then(
-        message => alert("Message sent successfully")
+        message => {
+            console.log("Email sent successfully: ", message);
+            alert("Message sent successfully");
+        }
     ).catch(
-        error => alert("Failed to send message: " + error)
+        error => {
+            console.error("Failed to send message: ", error);
+            alert("Failed to send message: " + error);
+        }
     );
 }
 
