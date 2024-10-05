@@ -40,9 +40,11 @@ function opentab(tabname) {
 function sendEmail() {
     const userEmail = document.getElementById("email").value; 
     
+    console.log("Attempting to send email...");
+    
     Email.send({
         SecureToken: "ea4e9e0c-97b9-4894-9440-8acf477a4e5d",
-        To: "vishalmpadhiyar1410@gmail.com", 
+        To: "21bca049@sxca.edu.in", 
         From: userEmail, 
         Subject: "New Contact Form Enquiry",
         Body: "Name: " + document.getElementById("name").value 
@@ -58,6 +60,7 @@ function sendEmail() {
         error => {
             console.error("Failed to send message: ", error);
             alert("Failed to send message: " + error);
+            console.error("Error details:", error);
         }
     );
 }
